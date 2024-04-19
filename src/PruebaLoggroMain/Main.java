@@ -54,7 +54,7 @@ public class Main {
             if(!letterFound.get()){
                 System.out.println("Bloques usados-----------------------------");
                 usedBlocks.forEach(System.out::println);
-                System.out.println("false-----------------------------");
+                System.out.println("NO es posible escribir usando los bloques la palabra: " + wordToUpperCase  + " el resultado es: false-----------------------------");
                 return false; //Retorno false si alguna letra no se encuen
             }
         }
@@ -62,7 +62,7 @@ public class Main {
        // setBlocks.forEach(System.out::println);
         System.out.println("Bloques usados-----------------------------");
         usedBlocks.forEach(System.out::println);
-        System.out.println("true-----------------------------");
+        System.out.println("Se puede escribir con bloques la palabra: " + wordToUpperCase  + " el resultado es:true-----------------------------");
         return true;
     }
 
