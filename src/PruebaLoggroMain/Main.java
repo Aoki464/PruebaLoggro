@@ -5,10 +5,10 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Pattern;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
        //Esto de aqui lo uso a modo de prueba
-       /*String[] SPANISH_WORDS = {
+      /* String[] SPANISH_WORDS = {
                 "a", "abajo", "abierto", "abrazo", "abril", "agua",
                 "ahora", "aire", "alma", "alto", "amar", "amigo",
                 "amor", "anillo", "anoche", "ante", "apoyo", "aprender",
@@ -16,13 +16,16 @@ public class Main {
                 "ayuda", "azul", "bajo", "belleza", "bien", "boca"
         };
         //Para mostrar los resultados impresos
-        Arrays.stream(SPANISH_WORDS).forEach(Main::canWriteWord);*/
+        for (String SPANISH_WORD : SPANISH_WORDS) {
+            canWriteWord(SPANISH_WORD);
+        }*/
 
-        System.out.println(canWriteWord("traje"));
-       // System.out.println(canWriteWord("traje1"));
+         System.out.println(canWriteWord("traje"));
+
 
     }
 
+    /*Este metodo sirve para verificar que la cadena ingresada es una palabra*/
     public static boolean isWord(String word) {
         /* Define un patron regular que acepte cualquier letra del alphabeto
          tanto con como sin tilde*/
@@ -30,8 +33,9 @@ public class Main {
         /*retorna true si cumple con el patron*/
         return pattern.matcher(word).matches();
     }
-
-    public static boolean canWriteWord(String word) throws Exception {
+    /*Este es el metodo principal que verifica que se puedan construir
+    las palabras con los bloques dados*/
+    public static boolean canWriteWord(String word){
 
         if (isWord(word)) {
             List<String> blocks = Arrays.asList("BO", "XK", "DQ", "CP", "NA",
@@ -45,6 +49,7 @@ public class Main {
             //Transformo la palabra para que siempre sea mayuscula
             String wordToUpperCase = word.toUpperCase();
             System.out.println(wordToUpperCase);
+            System.out.println("----------------------");
             // List<Boolean> hasCompletedWord = new ArrayList<>();
             for (int i = 0; i < wordToUpperCase.length(); i++) {
 
@@ -76,7 +81,7 @@ public class Main {
         }
         else {
             System.out.println("La cadena " + word + " no es una palabra");
-            throw new Exception("Esto no es una palabra");
+            return false;
         }
     }
 }
