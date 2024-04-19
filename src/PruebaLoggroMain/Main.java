@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
        //Esto de aqui lo uso a modo de prueba
-       String[] SPANISH_WORDS = {
+       /*String[] SPANISH_WORDS = {
                 "a", "abajo", "abierto", "abrazo", "abril", "agua",
                 "ahora", "aire", "alma", "alto", "amar", "amigo",
                 "amor", "anillo", "anoche", "ante", "apoyo", "aprender",
@@ -15,9 +15,9 @@ public class Main {
                 "ayuda", "azul", "bajo", "belleza", "bien", "boca"
         };
         //Para mostrar los resultados impresos
-        Arrays.stream(SPANISH_WORDS).forEach(Main::canWriteWord);
+        Arrays.stream(SPANISH_WORDS).forEach(Main::canWriteWord);*/
 
-      //  System.out.println(canWriteWord("traje"));
+        System.out.println(canWriteWord("traje"));
 
 
     }
