@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class PruebaLoggroTest {
 
     @Test
-    void canWriteWordTrue() {
+    void canWriteWordTrue() throws Exception {
 
         assertTrue(Main.canWriteWord("a"));
         assertTrue(Main.canWriteWord("libro"));
@@ -17,11 +17,11 @@ class PruebaLoggroTest {
         assertTrue(Main.canWriteWord("coMun"));
         assertTrue(Main.canWriteWord("ALMA"));
         assertTrue(Main.canWriteWord("DORITO"));
-
+       // assertTrue(Main.canWriteWord("DORITO1"));
     }
 
     @Test
-    void canWriteWordFalse() {
+    void canWriteWordFalse() throws Exception {
         assertFalse(Main.canWriteWord("bozo"));
         assertFalse(Main.canWriteWord("CAMPANA"));
         assertFalse(Main.canWriteWord("arlequin"));
