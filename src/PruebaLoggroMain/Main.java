@@ -20,7 +20,16 @@ public class Main {
             canWriteWord(SPANISH_WORD);
         }*/
 
-         System.out.println(canWriteWord("traje"));
+         String[] SPANISH_WORDS = {
+                "A", "libro", "BOZO", "TRAJE", "COMUN", "CAMPANA",
+                "dorito", "arlequin"
+        };
+        //Para mostrar los resultados impresos
+        for (String SPANISH_WORD : SPANISH_WORDS) {
+            canWriteWord(SPANISH_WORD);
+        }
+
+         //System.out.println(canWriteWord("traje"));
 
 
     }
@@ -68,7 +77,7 @@ public class Main {
                 if (!letterFound.get()) {
                     System.out.println("Bloques usados-----------------------------");
                     usedBlocks.forEach(System.out::println);
-                    System.out.println("NO es posible escribir usando los bloques la palabra: " + wordToUpperCase + " el resultado es: false-----------------------------");
+                    System.out.println("NO es posible escribir usando los bloques la palabra " + "'" + wordToUpperCase + "'" + " el resultado es: false-----------------------------");
                     return false; //Retorno false si alguna letra no se encuen
                 }
             }
@@ -76,7 +85,7 @@ public class Main {
             // setBlocks.forEach(System.out::println);
             System.out.println("Bloques usados-----------------------------");
             usedBlocks.forEach(System.out::println);
-            System.out.println("Se puede escribir con bloques la palabra: " + wordToUpperCase + " el resultado es:true-----------------------------");
+            System.out.println("Se puede escribir con bloques la palabra " + "'" + wordToUpperCase + "'" + " el resultado es:true-----------------------------");
             return true;
         }
         else {
